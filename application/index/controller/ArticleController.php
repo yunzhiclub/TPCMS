@@ -21,4 +21,9 @@ class ArticleController extends Controller
         return $this->fetch();
     }
 
+    public function edit()
+    {
+        return 'edit';
+    }
+
 }
