@@ -8,7 +8,8 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $articles =Article::getLists();
+        $articles = Article::getLists();
+        // var_dump($articles);
         $this->assign('articles',$articles);
         return $this->fetch();
     }

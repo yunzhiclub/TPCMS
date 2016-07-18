@@ -18,9 +18,9 @@
                     <td>{$key}</td>
                     <td><a href="{:url('detail?id=' . $article->getData('id'))}">{$article->title}</a></td>
                     <td>
-                    {eq name='$article->type' value='0'}科技{else /}自然{/eq}
+                        {$article->Category->name}
                     </td>
-                    <td>{$article.create_time}</td>
+                    <td>{$article->create_time}</td>
                     <td>
                         <a class="btn btn-primary" href="{:url('edit?id=' . $article->getData('id'))}">编辑</a>
                         &nbsp;&nbsp;
