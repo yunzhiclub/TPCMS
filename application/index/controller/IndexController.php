@@ -25,9 +25,17 @@ class IndexController extends Controller
         // var_dump($Component);
         return $Component->index();
     }
-
-    public function test()
+    /**
+     * 显示首页组件，其实和显示login是一样的，代码都一模一样，但是获取的menuID不同了，重要的是理解思想
+     * @return 调用index组件中的show方法
+     */
+    public function index()
     {
-        echo "hello";
+        $Menu = Menu::getFromUrl();
+        $controller = $Menu->Component->controller;
+        // var_dump($controller);
+        $class = '\app\index\component\\' . $controller;
+        $Component = new $class;
+        return $Component->show();
     }
 }

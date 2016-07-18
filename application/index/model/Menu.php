@@ -11,7 +11,7 @@ class Menu extends Model
     //根据url返回Menu类
     static public function getFromUrl()
     {
-        return self::get(7);
+        return self::get(1);
     }
 
     public function Component()
