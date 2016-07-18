@@ -38,4 +38,13 @@ class IndexController extends Controller
         $Component = new $class;
         return $Component->show();
     }
+
+    public function news()
+    {
+        $Menu = Menu::getFromUrl();
+        $controller = $Menu->Component->controller;
+        $class = '\app\index\component\\' . $controller;
+        $Component = new $class;
+        return $Component->index();
+    }
 }
