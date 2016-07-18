@@ -9,7 +9,7 @@ use think\Controller;
 class IndexController extends Controller
 {
 
-    public function index()
+    public function Login()
     {
         $Menu = Menu::getFromUrl();
         // var_dump($Menu);
