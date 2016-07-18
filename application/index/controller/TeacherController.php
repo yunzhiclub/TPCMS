@@ -23,7 +23,7 @@ class TeacherController extends Controller
             $teachers = $Teacher->where('name','like','%'.$keywords.'%')->paginate(3,false,$config);
 
             // 向V层传数据
-            $this->assign('teachers',$teachers);
+            $this->assign('teachers',$Teacher);
             // 获取模板信息
             return $this->fetch();
 

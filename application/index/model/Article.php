@@ -8,9 +8,14 @@ use think\Model;
 */
 class Article extends Model
 {
+    public function Category()
+    {
+        return $this->belongsTo('category');
+    }
+
     public static function getLists()
     {
-        $lists = Article::where('type',1)->select();
+        $lists = Article::where('status',1)->select();
         return $lists;
     }
 
