@@ -16,7 +16,7 @@
                 {volist name="articles" id="article" key="key"}
                 <tr>
                     <td>{$key}</td>
-                    <td><a href="{:url('detail?id=' . $article->getData('id'))}">{$article->title}</a></td>
+                    <td><a href="{:action('Blog/test','','widget')}">{$article->title}</a></td>
                     <td>
                         {$article->Category->name}
                     </td>
